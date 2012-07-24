@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120724123716) do
+ActiveRecord::Schema.define(:version => 20120724150230) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "name"
+    t.integer  "vertical_id"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "accounts", ["client_id"], :name => "index_accounts_on_client_id"
+  add_index "accounts", ["vertical_id"], :name => "index_accounts_on_vertical_id"
+
+  create_table "clients", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -35,6 +54,21 @@ ActiveRecord::Schema.define(:version => 20120724123716) do
     t.datetime "updated_at"
     t.integer  "vertical_id"
   end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "technology"
+    t.integer  "teamsize"
+    t.integer  "won"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.integer  "account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["account_id"], :name => "index_projects_on_account_id"
 
   create_table "verticals", :force => true do |t|
     t.string   "name"
