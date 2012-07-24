@@ -1,0 +1,5 @@
+ <%= form_tag(:controller => "employees", :action => "create") do %>  
+    <%= label_tag(:message, "Enter employee name") %><br />  
+    <%= text_box_tag(:message, nil) %><br />   
+    <%= submit_tag("Add") %>  
+ <% end %>  

@@ -1,5 +1,15 @@
 Manager::Application.routes.draw do
+  get "employees/index"
+
+  get "employees/create"
+
   resources :verticals
+
+
+    #  resources :employees do 
+     #  match ':controller/:action/:id'  
+     #  match ':controller/:action/:id.:format'  
+    #  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
