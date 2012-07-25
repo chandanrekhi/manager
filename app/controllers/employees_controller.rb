@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  before_filter :authenticate_employee!
+  
   def index
   	@employees = Employee.all(:order => "created_at DESC")
 

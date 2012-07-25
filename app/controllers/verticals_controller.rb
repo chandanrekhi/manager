@@ -1,4 +1,6 @@
 class VerticalsController < ApplicationController
+  before_filter :authenticate_employee!
+  
   # GET /verticals
   # GET /verticals.json
   def index

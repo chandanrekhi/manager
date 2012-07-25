@@ -1,4 +1,6 @@
 Manager::Application.routes.draw do
+  get "pages/home"
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :employees
@@ -13,6 +15,8 @@ Manager::Application.routes.draw do
      match ':controller/:action/:id'  
      match ':controller/:action/:id.:format'  
   end
+
+  resources :pages
 
     #  resources :employees do 
      #  match ':controller/:action/:id'  
@@ -68,7 +72,7 @@ Manager::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'verticals#index'
+   root :to => 'pages#home'
 
   # See how all your routes lay out with "rake routes"
 
