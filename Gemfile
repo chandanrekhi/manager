@@ -7,7 +7,8 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3'
 
-
+gem 'devise'
+gem 'rails_admin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

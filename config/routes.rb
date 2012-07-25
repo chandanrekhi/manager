@@ -1,4 +1,6 @@
 Manager::Application.routes.draw do
+  devise_for :employees
+
   get "employees/index"
 
   get "employees/create"
