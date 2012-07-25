@@ -1,6 +1,8 @@
 class Company < ActiveRecord::Base
 
-#Associations
+# Associations
 	has_many :verticals
-	has_many :employees, :through => :employee_verticals
+	
+# Validations
+    validates :name, :presence => true
 end

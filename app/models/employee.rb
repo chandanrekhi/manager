@@ -9,6 +9,10 @@ class Employee < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :role, :manager 
 
-#Associations	
+# Associations	
 	belongs_to :vertical
+	has_many :employee_verticals
+
+# Validations
+    validates :name, :email, :password, :password_confirmation, :presence => true
 end
