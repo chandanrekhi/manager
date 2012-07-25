@@ -9,6 +9,10 @@ Manager::Application.routes.draw do
 
   resources :verticals
 
+  resources :posts do 
+     match ':controller/:action/:id'  
+     match ':controller/:action/:id.:format'  
+  end
 
     #  resources :employees do 
      #  match ':controller/:action/:id'  
