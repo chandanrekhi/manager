@@ -29,7 +29,6 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
-    ansi (1.4.3)
     arel (2.2.3)
     bbenezech-nested_form (0.0.6)
     bcrypt-ruby (3.0.1)
@@ -48,6 +47,7 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -118,6 +118,19 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     remotipart (1.0.2)
+    rspec (2.10.0)
+      rspec-core (~> 2.10.0)
+      rspec-expectations (~> 2.10.0)
+      rspec-mocks (~> 2.10.0)
+    rspec-core (2.10.1)
+    rspec-expectations (2.10.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.10.1)
+    rspec-rails (2.10.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec (~> 2.10.0)
     sass (3.1.20)
     sass-rails (3.1.6)
       actionpack (~> 3.1.0)
@@ -135,8 +148,6 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    turn (0.9.6)
-      ansi
     tzinfo (0.3.33)
     uglifier (1.2.6)
       execjs (>= 0.3.0)
@@ -157,8 +168,8 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.1.1)
   rails_admin
+  rspec-rails (~> 2.0)
   sass-rails (~> 3.1.4)
   sqlite3
-  turn
   uglifier (>= 1.0.3)
   web-app-theme (~> 0.8.0)
