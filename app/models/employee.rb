@@ -12,6 +12,7 @@ class Employee < ActiveRecord::Base
 # Associations	
 	belongs_to :vertical
 	has_many :employee_verticals
+  has_many :posts, :dependent => :destroy
 
 # Validations
     validates :name, :email, :password, :password_confirmation, :presence => true

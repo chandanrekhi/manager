@@ -9,7 +9,10 @@ class PostsController < ApplicationController
   end  
     
   def create  
-  	@post = Post.create(:message => params[:message])  
+   
+  	@post = Post.create(:message => params[:message], :employee_id => :current_employee)  
+   # @post = Post.create(params[:post].merge!(:employee_id => session[:employee_id]))
+   
     respond_to do |format|  
       if @post.save  
         format.html { redirect_to posts_path }  
